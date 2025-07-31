@@ -26,6 +26,13 @@ useEffect(() => {
         start: 'top top',
         end: '+=1500',
         scrub: true,
+        markers: false,
+        invalidateOnRefresh: true,
+        onEnter: () => video.play(),
+        onLeave: () => video.pause(),
+        onEnterBack: () => video.play(),
+        onLeaveBack: () => video.pause(),
+        
       },
     });
   };
