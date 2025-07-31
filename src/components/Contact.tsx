@@ -26,17 +26,11 @@ const Contact = () => {
     <section ref={ref} className="py-20 px-4 bg-gradient-to-b from-white to-[#f5f0e6]">
       <div className="max-w-4xl mx-auto">
         <h2 className={`font-serif text-3xl md:text-4xl font-bold text-[#3d673d] text-center mb-16 transform transition-all duration-800 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-          Contact & Compliments
+          Contact 
         </h2>
 
         <div className={`bg-white rounded-3xl shadow-2xl p-8 md:p-12 relative overflow-hidden transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
-          {/* Decorative Leaf Shadows */}
-          <div className="absolute -top-4 -right-4 opacity-10">
-            <Leaf className="w-24 h-24 text-[#3d673d] transform rotate-45" />
-          </div>
-          <div className="absolute -bottom-4 -left-4 opacity-10">
-            <Leaf className="w-20 h-20 text-[#b79028] transform -rotate-45" />
-          </div>
+
 
           {/* Golden Border */}
           <div className="absolute inset-0 rounded-3xl border-2 border-[#b79028] opacity-20"></div>
