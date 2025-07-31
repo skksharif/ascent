@@ -1,0 +1,74 @@
+import React, { useEffect, useRef, useState } from 'react';
+import { Heart, Camera, TreePine, Sparkles } from 'lucide-react';
+
+const PerfectFor = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  const items = [
+    { icon: Heart, title: 'Destination Weddings', color: '#b79028' },
+    { icon: TreePine, title: 'Nature-Themed Events', color: '#3d673d' },
+    { icon: Camera, title: 'Pre-Wedding Shoots & Receptions', color: '#b79028' },
+    { icon: Sparkles, title: 'Romantic Getaways & Honeymoons', color: '#3d673d' },
+  ];
+
+  return (
+    <section ref={ref} className="py-20 px-4 bg-white">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Text Content */}
+          <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'}`}>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#3d673d] mb-8">
+              Perfect For
+            </h2>
+            
+            <div className="space-y-6">
+              {items.map((item, index) => (
+                <div
+                  key={index}
+                  className={`flex items-center space-x-4 p-4 rounded-lg border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:scale-105 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-8 opacity-0'}`}
+                  style={{ transitionDelay: `${index * 200}ms` }}
+                >
+                  <div 
+                    className="w-12 h-12 rounded-full flex items-center justify-center shadow-md"
+                    style={{ backgroundColor: `${item.color}20`, border: `2px solid ${item.color}30` }}
+                  >
+                    <item.icon className="w-6 h-6" style={{ color: item.color }} />
+                  </div>
+                  <span className="text-lg font-medium text-[#3d673d]">{item.title}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className={`relative transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'}`}>
+            <div className="relative bg-gradient-to-br from-[#f5f0e6] to-[#d3f2e5] rounded-3xl h-96 overflow-hidden flex items-center justify-center">
+              <img
+                src="/logo.png"
+                alt="Event or Nature"
+                className="object-contain"
+              />
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default PerfectFor;
