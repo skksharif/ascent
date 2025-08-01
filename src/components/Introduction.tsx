@@ -25,18 +25,6 @@ const Introduction = () => {
   return (
     <section ref={ref} className="py-20 px-4 bg-gradient-to-b from-white to-[#f5f0e6]">
       <div className="max-w-4xl mx-auto text-center">
-        {/* Floating Leaves Animation */}
-        <div className="relative mb-12">
-          <div className="absolute -top-10 left-10 animate-bounce delay-100">
-            <Leaf className="w-6 h-6 text-[#3d673d] opacity-30" />
-          </div>
-          <div className="absolute -top-8 right-12 animate-bounce delay-300">
-            <Leaf className="w-4 h-4 text-[#b79028] opacity-40" />
-          </div>
-          <div className="absolute -top-6 left-1/3 animate-bounce delay-500">
-            <Leaf className="w-5 h-5 text-[#3d673d] opacity-20" />
-          </div>
-        </div>
 
         <h2 className={`font-serif text-3xl md:text-4xl font-bold text-[#3d673d] mb-8 transform transition-all duration-800 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           Grand Opening Soon
@@ -58,11 +46,7 @@ const Introduction = () => {
         </div>
 
         {/* Additional decorative elements */}
-        <div className="mt-12 flex justify-center space-x-8 opacity-30">
-          <div className="w-2 h-2 bg-[#b79028] rounded-full animate-pulse"></div>
-          <div className="w-2 h-2 bg-[#3d673d] rounded-full animate-pulse delay-200"></div>
-          <div className="w-2 h-2 bg-[#b79028] rounded-full animate-pulse delay-400"></div>
-        </div>
+
       </div>
     </section>
   );

@@ -23,7 +23,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <section ref={ref} className="py-20 px-4 bg-gradient-to-b from-white to-[#f5f0e6]">
+    <section ref={ref} className="py-20 px-4 bg-gradient-to-b from-white to-[#f5f0e6]" id='contact'>
       <div className="max-w-4xl mx-auto">
         <h2 className={`font-serif text-3xl md:text-4xl font-bold text-[#3d673d] text-center mb-16 transform transition-all duration-800 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           Contact 

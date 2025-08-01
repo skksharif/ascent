@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start space-x-3 mb-4">
               <div className="w-10 h-10 bg-gradient-to-br from-[#b79028] to-[#d4af37] rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">AE</span>
+                <img src="/logo.png" alt="" className='shadow'/>
               </div>
               <span className="font-serif text-xl font-bold">Ascent Eco Resorts</span>
             </div>

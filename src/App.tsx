@@ -8,6 +8,7 @@ import QuoteBanner from "./components/QuoteBanner";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import SplitHero from "./components/SplitHero";
+import Gallery from "./components/Gallery";
 
 function App() {
   return (
@@ -16,8 +17,8 @@ function App() {
       <Hero />
       <Introduction />
       <PerfectFor />
-      <SplitHero />
       <WhatAwaits />
+      <Gallery/>
       <QuoteBanner />
       <Contact />
       <Footer />

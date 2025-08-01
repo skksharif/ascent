@@ -1,0 +1,22 @@
+.gallery-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery-scroll::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.gallery-scroll::-webkit-scrollbar-thumb {
+  background: #3d673d;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.gallery-scroll:hover::-webkit-scrollbar-thumb {
+  background: #2d4e2d;
+}
+
+.gallery-scroll {
+  scrollbar-color: #3d673d ;
+  scrollbar-width: thin;
+}
