@@ -74,7 +74,7 @@ const Navbar = () => {
       <div
         className={`md:hidden transition-all duration-500 ease-in-out overflow-hidden
           ${isOpen ? "max-h-[400px] opacity-100 mt-2" : "max-h-0 opacity-0"}
-          bg-white rounded-2xl shadow-md px-4`}
+           shadow-md px-4`}
       >
         <div className="flex flex-col py-4 gap-2">
           {menuItems.map((item) => (
