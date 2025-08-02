@@ -12,7 +12,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-3xl mx-auto px-4 py-2 bg-white/70 backdrop-blur-lg rounded-full shadow-md transition-all duration-300">
+    <nav className="fixed top-4 inset-x-0 z-50 w-full max-w-2xl mx-auto px-4 py-2 bg-white/70 backdrop-blur-lg rounded-full shadow-md transition-all duration-300">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
@@ -50,7 +50,7 @@ const Navbar = () => {
       <div
         className={`sm:hidden overflow-hidden transition-all duration-300 ease-in-out ${
           isOpen ? "max-h-60 opacity-100 mt-2" : "max-h-0 opacity-0"
-        } bg-white/90 rounded-lg shadow-md px-4 py-3 absolute left-1/2 transform -translate-x-1/2 w-[calc(100%-2rem)] mt-1`}
+        } bg-white/90 rounded-lg shadow-md px-4 py-3 absolute left-1/2 transform -translate-x-1/2 w-[calc(100%-2rem)]`}
       >
         <div className="flex flex-col gap-3">
           {menuItems.map((item) => (
